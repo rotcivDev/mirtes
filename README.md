@@ -1,24 +1,8 @@
-# README
+# mirtes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Application aiming to gain basic technical knowledge about DoR.
 
-Things you may want to cover:
+For this, I took advantage of the task of digitizing old recipes from a neighbor, "Dona Mirtes", which were in an old box, and followed the official documentation as a guide.
 
 * Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- ruby-3.1.4
