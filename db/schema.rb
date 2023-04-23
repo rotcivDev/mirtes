@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_21_170204) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_23_021858) do
+  create_table "coments", force: :cascade do |t|
+    t.string "author"
+    t.text "body"
+    t.integer "recipe_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id"], name: "index_coments_on_recipe_id"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string "author"
+    t.text "body"
+    t.integer "recipe_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id"], name: "index_comments_on_recipe_id"
+  end
+
   create_table "recipes", force: :cascade do |t|
     t.string "publisher"
     t.string "title"
@@ -19,4 +37,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_21_170204) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "coments", "recipes"
+  add_foreign_key "comments", "recipes"
 end
