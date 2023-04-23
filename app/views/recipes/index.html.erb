@@ -1,2 +1,12 @@
-<h1>Recipes#index</h1>
-<p>Find me in app/views/recipes/index.html.erb</p>
+<h1>Receitas</h1>
+<p>Encontre a melhor receita para seu preparo!</p>
+
+<ul>
+    <% @recipes.each do |recipe| %>
+        <li> 
+            <%= link_to recipe.title, recipe %>
+        </li>
+    <% end %>
+</ul>
+
+<%= link_to "Nova receita", new_recipe_path %>

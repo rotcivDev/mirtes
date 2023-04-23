@@ -1,0 +1,12 @@
+<h1><%= @recipe.title %></h1>
+<h5><%= @recipe.publisher %></h5>
+
+<%= @recipe.body %>
+
+<ul>
+  <li><%= link_to "Edit", edit_recipe_path(@recipe) %></li>
+    <li><%= link_to "Destroy", recipe_path(@recipe), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>

@@ -1,0 +1,28 @@
+<%= form_with model: recipe do |form| %>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+        <% recipe.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+    <div>
+    <%= form.label :publisher %><br>
+    <%= form.text_field :publisher %>
+            <% recipe.errors.full_messages_for(:publisher).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %>
+            <% recipe.errors.full_messages_for(:body).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
